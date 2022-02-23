@@ -1,4 +1,2 @@
 # PLiS
-Repositorio del aplicativo web para simulador cuotas
-j
-u
+Repositorio del aplicativo web para simular cuotas
