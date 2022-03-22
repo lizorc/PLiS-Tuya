@@ -12,7 +12,15 @@ function Resultados(){
     const numQuotas = datos.numQuotas;
     const interestRate = datos.interestRate;
     
-    const calc = value * (Math.pow(1+interestRate/100,numQuotas)*interestRate/100)/(Math.pow(1+interestRate/100,numQuotas)-1);
+    for(let i = 1; i<=numQuotas;i++){
+        const quota = value * (Math.pow(1+interestRate/100,numQuotas)*interestRate/100)/(Math.pow(1+interestRate/100,numQuotas)-1);
+        const interestPayment = parseFloat(value*(interestRate/100));
+        const capPayment = quota - interestPayment;
+        const amount = parseFloat(amount-capPayment);
+    }
+   
+
+
     console.log(calc);
 
     return (
