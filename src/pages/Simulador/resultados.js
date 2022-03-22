@@ -17,10 +17,7 @@ function Resultados(){
 
     return (
         <div>
-            {value}
-            {fee}
-            {numQuotas}
-            {interestRate}
+            La cuota mensual es: {calc}
         </div>
     );
 }
