@@ -1,5 +1,7 @@
 import React from 'react';
 import './NavBar.css'
+import { Link } from "react-router-dom";
+  
 function NavBar(){
     return (
         <header>
@@ -8,9 +10,9 @@ function NavBar(){
 
                 <nav className="navbar">
                     <ul>
-                        <li><a href="">Inicio</a></li>
-                        <li><a href="">Simulador de cuotas</a></li>
-                        <li><a href="">Nosotros</a></li>
+                        <li><Link to="/">Inicio</Link></li>
+                        <li><Link to="/simulador">Simulador de cuotas</Link></li>
+                        <li><Link to="/nosotros">Nosotros</Link></li>
                     </ul>
                 </nav>
                 
@@ -19,4 +21,4 @@ function NavBar(){
     );
 }
 
-export {NavBar};
+export default NavBar;
