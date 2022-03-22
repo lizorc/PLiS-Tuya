@@ -2,6 +2,7 @@ import React from 'react';
 import NavBar from './components/NavBar/navbar'
 import Simulador from './pages/Simulador/simulador'
 import Instructivo from './pages/Instructivo/instructivo';
+import Resultados from './pages/Resultados/resultados';
 import {
     BrowserRouter as Router,
     Switch,
@@ -23,6 +24,10 @@ function Routes(){
 
             <Route exact path="/instructivo">
                 <Instructivo/>
+            </Route>
+
+            <Route exact path="/resultados">
+                <Resultados/>
             </Route>
 
             <Route exact path="/nosotros">

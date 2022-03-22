@@ -1,0 +1,36 @@
+.formBody{
+    width: 100%;
+    text-align: center;
+}
+
+.tituloResultado{
+    padding: 40px;
+    margin-bottom: 30px;
+    color: #707070;
+    font-size: 49px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+.resultField{
+    margin-bottom: 60px;
+}
+
+.submitButton{
+
+    width: 200px;
+    height: 40px;
+    margin-right: 60px;
+    color: white;
+    background-color: #0C6FED;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    border-radius: 20px;
+    border:#707070;
+}
+.submitButton:hover{
+    background-color:#053d86 ;
+    transition: 0.5s;
+}
+
