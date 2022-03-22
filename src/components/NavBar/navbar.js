@@ -1,14 +1,14 @@
 import React from 'react';
-import './NavBar.css'
+import styles from './navbar.module.css'
 import { Link } from "react-router-dom";
   
 function NavBar(){
     return (
         <header>
-            <div className="menu">
-                <img className="img_navbar" src={require('./PLIS.png')} alt=""/>
+            <div className={styles.menu}>
+                <img className={styles.imgNavbar} src={require('./PLIS.png')} alt=""/>
 
-                <nav className="navbar">
+                <nav className={styles.navbar}>
                     <ul>
                         <li><Link to="/">Inicio</Link></li>
                         <li><Link to="/simulador">Simulador de cuotas</Link></li>
