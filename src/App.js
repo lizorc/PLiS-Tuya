@@ -1,14 +1,12 @@
 import React from 'react';
-import {NavBar} from '../NavBar'
+import {Routes} from './routes'
 //import './App.css';
 
 function App() {
   return (
-
-    <React.Fragment>
-      <NavBar/>
-    </React.Fragment>
-
+        <React.Fragment>
+            <Routes/>
+        </React.Fragment>
   );
 }
 
