@@ -2,42 +2,43 @@ import React from 'react';
 import NavBar from './components/NavBar/navbar'
 import Simulador from './pages/Simulador/simulador'
 import Instructivo from './pages/Instructivo/instructivo';
+import Nosotros from './pages/Nosotros/nosotros';
 import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-  } from "react-router-dom";
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
 
-function Routes(){
-    return (
-        <Router>
-          <div>
-            
-            <NavBar/>
+function Routes() {
+  return (
+    <Router>
+      <div>
 
-            <Switch>
+        <NavBar />
 
-            <Route exact path="/simulador">
-                <Simulador />
-            </Route>
+        <Switch>
 
-            <Route exact path="/instructivo">
-                <Instructivo/>
-            </Route>
+          <Route exact path="/simulador">
+            <Simulador />
+          </Route>
 
-            <Route exact path="/nosotros">
-                Acá va nosotros
-            </Route>
+          <Route exact path="/instructivo">
+            <Instructivo />
+          </Route>
 
-            <Route exact path="/">
-                
-            </Route>
+          <Route exact path="/nosotros">
+            <Nosotros />
+          </Route>
 
-            </Switch>
+          <Route exact path="/">
 
-          </div>
-        </Router>
-      );
+          </Route>
+
+        </Switch>
+
+      </div>
+    </Router>
+  );
 }
 
-export {Routes}
+export { Routes }
