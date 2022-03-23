@@ -10,6 +10,9 @@ function Card(props) {
                 <p className="card-description">
                     {element.description}
                 </p>
+                <a href={element.github} target="_blank" className="card-link">
+                    GitHub
+                </a>
             </div>
         </div>
     );
