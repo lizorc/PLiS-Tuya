@@ -30,6 +30,10 @@ function Routes(){
                 <Instructivo/>
             </Route>
 
+            <Route exact path="/resultados">
+                <Resultados/>
+            </Route>
+
             <Route exact path="/nosotros">
                 Acá va nosotros
             </Route>

@@ -60,7 +60,7 @@ function Simulador(){
 
             <div className={styles.simulatorField}>
 
-                <input className={styles.submitButton} type="submit" value="Realizar simulación"/>
+                <Link to="/resultados"><input className={styles.submitButton} type="submit" value="Realizar simulación"/></Link>
                 <Link to="/instructivo"><input className={styles.instButton} type="submit" value="Instructivo"/></Link>
 
             </div>
