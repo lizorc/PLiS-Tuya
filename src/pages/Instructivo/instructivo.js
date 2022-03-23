@@ -3,6 +3,7 @@ import styles from './instructivo.module.css'
 import { Link } from "react-router-dom";
 
 function Instructivo() {
+
     return (
   
             <div className={styles.container}>
