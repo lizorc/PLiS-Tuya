@@ -1,0 +1,94 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container{
+    text-align:center;
+}
+
+.title{
+    width: 100%;
+    text-align: center;
+    padding: 30px;
+    color: #0C6FED;
+    font-size: 49px;
+    font-weight: bold;
+}
+
+.instrBody{
+    margin:0 auto;
+    margin-bottom: 100px;
+    width: 80%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img1 img{
+    width: 400px;
+}
+
+
+.img1{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text1{
+    text-align: left;
+    color:#707070;
+    margin-right:5%;
+    width: 30%;
+    font-size: 20px;
+}
+
+.img2{
+    display:flex;
+    margin-right: 5%;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.img2 img{
+    width: 450px;
+}
+
+.text2{
+    text-align: left;
+    width: 30%;
+    color:#707070;
+    font-size: 20px;
+}
+
+.step1{
+    color:#707070;
+    font-size: 40px;
+}
+
+.submitButton{
+
+    width: 408px;
+    height: 57px;
+
+    color: white;
+    background-color: #0C6FED;
+    font-size: 25px;
+    font-weight: bold;
+    font-style: normal;
+    border-radius: 20px;
+    border:#707070;
+}
+
+.submitButton:hover{
+    background-color:#053d86 ;
+    transition: 0.5s;
+}
+
+.simulatorField{
+    width: 100%;
+    margin-top:100px;
+    margin-bottom: 2%;
+    text-align: center;
+}
