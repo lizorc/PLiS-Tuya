@@ -16,8 +16,8 @@ function Inicio() {
                         <p className={styles.body1}>Mejora tu experiencia comprando con tus tarjetas de crédito y entérate siempre de lo que pagarás realmente por tus productos.</p>
                         
                         <div class={styles.simulatorField}>
-                        <Link to="/resultados"><input className={styles.submitButton} type="submit" value="Realizar simulación"/></Link>
-                <Link to="/instructivo"><input className={styles.instButton} type="submit" value="Instructivo"/></Link>
+                        <Link to="/simulador"><input className={styles.submitButton} type="submit" value="Realizar simulación"/></Link>
+                        <Link to="/instructivo"><input className={styles.instButton} type="submit" value="Instructivo"/></Link>
                         </div>
                     </div>
 
