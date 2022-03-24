@@ -1,16 +1,16 @@
-*{
+* {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.container{
-    text-align:center;
+.container {
+    text-align: center;
 }
 
-p{
-    padding:0px;
+p {
+    padding: 0px;
 }
 
-.title{
+.title {
     width: 100%;
     text-align: center;
     padding: 30px;
@@ -19,108 +19,100 @@ p{
     font-weight: bold;
 }
 
-.instrBody{
-    margin:0 auto;
+.instrBody {
+    margin: 0 auto;
     margin-bottom: 100px;
     width: 100%;
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.img1 img{
+.img1 img {
     width: 500px;
 }
 
-
-.img1{
-    display:flex;
+.img1 {
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.text1{
+.text1 {
     text-align: left;
-    color:#707070;
-    margin-right:20%;
+    color: #707070;
+    margin-right: 20%;
     width: 35%;
     font-size: 40px;
 }
 
-.img2{
+.img2 {
     width: 50%;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
-.img2 img{
+.img2 img {
     width: 70%;
 }
 
-.text2{
+.text2 {
     text-align: left;
-    width: 50%;
-    color:#707070;
+    width: 60%;
+    color: #707070;
     font-size: 40px;
 }
 
-.step1{
-    color:#707070;
+.step1 {
+    color: #707070;
     font-size: 69px;
     width: 806px;
     height: 106px;
-
 }
 
-.step2{
-    color:#0C6FED;
+.step2 {
+    color: #0C6FED;
     font-size: 59px;
     font-weight: lighter;
     width: 833px;
     height: 158px;
-
 }
 
-.body1{
-    margin-top:95px;
+.body1 {
+    margin-top: 95px;
     font-weight: lighter;
     width: 813px;
     height: 159px;
 }
 
-.body2{
-    margin-top:25px;
+.body2 {
+    margin-top: 25px;
     font-weight: lighter;
     font-size: 59;
     width: 813px;
     height: 159px;
 }
 
-.submitButton{
-
+.submitButton {
     width: 299px;
     height: 59px;
-
     color: white;
     background-color: #0C6FED;
     font-size: 30px;
     font-weight: bold;
     font-style: normal;
     border-radius: 20px;
-    border:#707070;
+    border: #707070;
     margin-right: 125px;
-    
 }
 
-.submitButton:hover{
-    background-color:#053d86 ;
+.submitButton:hover {
+    background-color: #053d86;
     transition: 0.5s;
 }
 
-.instButton{
-
+.instButton {
     width: 299px;
     height: 59px;
     color: #0C6FED;
@@ -129,31 +121,30 @@ p{
     font-weight: bold;
     font-style: normal;
     border-radius: 20px;
-    border:none;
+    border: none;
 }
 
-.instButton:hover{
-    color:black;
-    transition:0.5s;
-}
-
-.submitButton:hover{
-    background-color:#053d86 ;
+.instButton:hover {
+    color: black;
     transition: 0.5s;
 }
 
-.simulatorField{
+.submitButton:hover {
+    background-color: #053d86;
+    transition: 0.5s;
+}
+
+.simulatorField {
     width: 140%;
-    margin-top:100px;
+    margin-top: 100px;
     margin-bottom: 2%;
 }
 
-.footer{
-    text-align:center;
+.footer {
+    text-align: center;
     width: 100%;
-    height: 400px;
+    height: 500px;
     background-color: #dddada;
-
 }
 
 .column_third {
@@ -161,25 +152,26 @@ p{
     width: 25%;
     padding: 20px;
     margin-left: 30px;
-  }
+}
 
-  
-  /* Clear floats after the columns */
-  .row:after {
+
+/* Clear floats after the columns */
+
+.row:after {
     content: "";
     display: table;
     clear: both;
     text-align: center;
     margin-bottom: 20px;
-  }
+}
 
-  .column_small_left_side {
+.column_small_left_side {
     float: left;
     width: 8%;
     padding: 15px;
 }
 
-.title_3{
+.title_3 {
     text-align: center;
     color: #707070;
     font-size: 50px;
@@ -187,17 +179,17 @@ p{
     font-weight: bold;
 }
 
-.text3{
+.text3 {
     text-align: center;
     padding-top: 15px;
-    color:#707070;
+    color: #707070;
     font-size: 30px;
     font-weight: lighter;
 }
 
-.text4{
+.text4 {
     text-align: center;
     padding: 15px;
-    color:#0C6FED;
+    color: #0C6FED;
     font-size: 1opx;
 }
