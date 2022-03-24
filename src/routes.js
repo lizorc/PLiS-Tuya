@@ -4,6 +4,7 @@ import Simulador from './pages/Simulador/simulador'
 import Instructivo from './pages/Instructivo/instructivo';
 import Resultados from './pages/Simulador/resultados'
 import Inicio from './pages/Inicio/inicio'
+import Nosotros from './pages/Nosotros/nosotros'
 import {
     BrowserRouter as Router,
     Switch,
@@ -36,7 +37,7 @@ function Routes(){
             </Route>
 
             <Route exact path="/nosotros">
-                Acá va nosotros
+                <Nosotros />
             </Route>
 
             <Route exact path="/">
