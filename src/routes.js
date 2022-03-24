@@ -3,6 +3,7 @@ import NavBar from './components/NavBar/navbar'
 import Simulador from './pages/Simulador/simulador'
 import Instructivo from './pages/Instructivo/instructivo';
 import Resultados from './pages/Simulador/resultados'
+import Inicio from './pages/Inicio/inicio'
 import {
     BrowserRouter as Router,
     Switch,
@@ -27,11 +28,11 @@ function Routes(){
             </Route>
 
             <Route exact path="/instructivo">
-                <Instructivo/>
+                <Instructivo />
             </Route>
 
             <Route exact path="/resultados">
-                <Resultados/>
+                <Resultados />
             </Route>
 
             <Route exact path="/nosotros">
@@ -39,7 +40,7 @@ function Routes(){
             </Route>
 
             <Route exact path="/">
-                
+                <Inicio />
             </Route>
 
             </Switch>
