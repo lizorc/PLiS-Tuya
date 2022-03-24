@@ -12,7 +12,7 @@ function Inicio() {
 
                 <div className={styles.instrBody}>
                     <div className={styles.text1}>
-                        <p className={styles.step1}>Manten tus finanzas y compras bajo control</p>
+                        <p className={styles.step1}>Mantén tus finanzas y compras bajo control</p>
                         <p className={styles.body1}>Mejora tu experiencia comprando con tus tarjetas de crédito y entérate siempre de lo que pagarás realmente por tus productos.</p>
                         
                         <div class={styles.simulatorField}>
@@ -32,7 +32,7 @@ function Inicio() {
                     </div>
 
                     <div className={styles.text2}>
-                        <p className={styles.step2}>Visualiza de forma sencilla la financiacion de tus productos</p>
+                        <p className={styles.step2}>Visualiza de forma sencilla la financiación de tus productos</p>
                         <p className = {styles.body2}>Usamos una forma de visualizar la información que permite un mejor entendimiento y claridad a la hora de tener tus resultados.</p>
                     </div>
                 </div>
