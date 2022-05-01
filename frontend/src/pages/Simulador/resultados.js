@@ -13,13 +13,13 @@ function Resultados(){
     let interestPayment=0,capPayment=0,quota=0;
 
     const cuota = value * (Math.pow(1+interestRate/100,numQuotas)*interestRate/100)/(Math.pow(1+interestRate/100,numQuotas)-1);
-
+    interestPayment = parseFloat(value*(interestRate/100));
+    capPayment = cuota-interestPayment;
+    value = parseFloat(value-capPayment);
     
     const months = [...Array(parseInt(numQuotas)).keys()].map((item,key)=>{
     
-        interestPayment = parseFloat(value*(interestRate/100));
-        capPayment = cuota-interestPayment;
-        value = parseFloat(value-capPayment);
+        
 
         return (
             <div key={key} className={styles.BoxWhite}>
@@ -44,7 +44,18 @@ function Resultados(){
             <p className={styles.tituloResultado}>Resultado de la simulación</p>
 
             <div className = {styles.margen}>
-                {months}
+                
+                <div className={styles.BoxWhite}>
+                    <h4 className={styles.month}>¿Qué pagarás?</h4>
+                    <p className={styles.titleRes}> Pagarás cuotas de: </p>
+                    <span>
+                        <p className={styles.resRes}>${cuota.toFixed(2)} COP</p> 
+                    </span>
+                    <p className={styles.titleRes}>Durante: </p>
+                    <span>
+                        <p className={styles.resRes}>{numQuotas} meses</p>
+                    </span>
+                </div>
             </div>
 
             <div className={styles.resultField}>

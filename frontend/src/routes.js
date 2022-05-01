@@ -1,10 +1,15 @@
 import React from 'react';
 import NavBar from './components/NavBar/navbar'
 import Simulador from './pages/Simulador/simulador'
-import Instructivo from './pages/Instructivo/instructivo';
+import Instructivo from './pages/Instructivo/instructivo'
 import Resultados from './pages/Simulador/resultados'
 import Inicio from './pages/Inicio/inicio'
 import Nosotros from './pages/Nosotros/nosotros'
+import Login from './components/Login/login'
+import Profile from './components/Profile/profile'
+import Logout from './components/Logout/logout'
+import CardCreate from './components/CardCreate/cardCreate'
+
 import {
     BrowserRouter as Router,
     Switch,
@@ -38,6 +43,26 @@ function Routes(){
 
             <Route exact path="/nosotros">
                 <Nosotros />
+            </Route>
+
+            <Route exact path="/perfil">
+                <Profile />
+            </Route>
+
+            <Route exact path="/login">
+                <Login />
+            </Route>
+
+            <Route exact path="/logout">
+                <Logout />
+            </Route>
+
+            <Route exact path="/inicio/:id">
+                <Inicio />
+            </Route>
+
+            <Route exact path="/crearTarjeta">
+                <CardCreate />
             </Route>
 
             <Route exact path="/">

@@ -57,9 +57,17 @@ h4{
     padding-bottom: 30px;
 }
 
-p{
+.titleRes{
+    font-size:20px;
     font-weight: bold;
-    padding: 20px;
+}
+
+.resRes{
+    font-size:25px;
+    font-weight: normal;
+    font-style:normal;
+    font-weight: bold;
+    color:#0C6FED;
 }
 
 span{
@@ -71,3 +79,4 @@ span{
 .month{
     color:#0C6FED;
 }
+
