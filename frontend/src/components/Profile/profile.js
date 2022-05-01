@@ -1,0 +1,86 @@
+import React from 'react';
+import styles from './profile.module.css';
+import { useState, useEffect } from 'react';
+import { useAuth0 } from '@auth0/auth0-react';
+import { Link, useHistory} from "react-router-dom";
+import Cards  from '../UserCards/cards'
+import UserForm from '../UserForm/userForm';
+import axios from 'axios';
+
+const Profile = () => {
+
+    const {user, isAuthenticated} = useAuth0();
+    const email = user.email;
+    console.log(user.email)
+    let url = "http://localhost:4000/card/"+email;
+    let cardsArray = [];
+    const [cards, setCards] = useState([]);
+
+    useEffect(()=>{
+      const fetchCards = async()=>{
+        const {data} = await axios.get(url);
+        setCards(data)
+      }
+      fetchCards();
+    },[])
+    
+    axios.get(url).then(response=>{
+      cardsArray = response.data;
+    })
+
+    
+
+  return (
+    isAuthenticated && (
+        <div className={styles.container}>
+
+            <div className = {styles.user}>
+              <div className = {styles.userInfo}>
+                <img src={user.picture} className={styles.imgPerfil} alt={user.name}/>
+                <p className={styles.info}>Información de {user.name}</p>
+              </div>
+
+              <div className = {styles.imgBienvenida}>
+              <img src={require("../../assets/img/construccion.png")} alt={user.name}/>
+              </div>
+
+            </div>
+            
+            
+
+            <div className = {styles.cardA}>
+              <div className = {styles.cardInfo}>
+                <h2>Información de las tarjetas</h2>
+
+                <div className={styles.buttonContainer}>
+                <Link to = "/crearTarjeta"><button className={styles.addButton}>Añadir tarjeta</button></Link>
+                </div>
+
+                {cards.map((card)=>(
+                    <Cards
+                    nombre = {card.nombre}
+                    nroTarjeta = {card.nroTarjeta}
+                    cuotaManejo = {card.cuotaManejo}
+                    interes = {card.tasaInteres}
+                    />
+                ))}         
+
+              </div>
+
+              
+            </div>
+
+
+
+            
+
+           
+            
+        </div>
+
+        
+    )
+  )
+};
+
+export default Profile

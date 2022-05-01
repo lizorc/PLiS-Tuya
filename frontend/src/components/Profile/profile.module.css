@@ -1,0 +1,155 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.imgBienvenida{
+  display: flex;
+  margin-top:100px;
+  justify-content:center;
+  align-items: center;
+}
+
+.imgBienvenida img{
+  width: 50%;
+}
+
+
+.user{
+    display:inline-block;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 105vh;
+    border-right: solid rgb(148, 148, 148);
+    border-right-width: 0.5px;
+}
+
+.formContainer{
+  display:flex;
+  height: vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardA{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    float:right;
+}
+
+.cardInfo{
+  margin-top:30px;
+  text-align: center;
+}
+
+.cardInfo h2{
+    color: black;
+}
+
+.specificCard{
+    border: solid black;
+    padding:10px;
+    margin-top:20px;
+}
+
+.addButton{
+    width: 150px;
+    height: 40px;
+    margin-top: 10px;
+    color: white;
+    background-color: #0C6FED;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: normal;
+    border-radius: 20px;
+    border:#707070;
+    transition: 0.5s;
+    
+}
+
+.buttonContainer{
+    text-align: center;
+}
+
+.addButton:hover{
+    background-color: #053d86;
+    transition: 0.5s;
+}
+
+.userInfo{
+  width: 100%;
+  height: 150px;
+}
+
+.imgPerfil{
+    margin-top: 20px;
+    margin-left: 40px;
+    float:left;
+}
+
+.info{
+    color: #053d85;
+    float:right;
+    font-size: 40px;
+    margin-right: 40px;
+    margin-top: 45px;
+}
+
+.card{
+    height: 310px;
+    width: 500px;
+    background-image:linear-gradient(rgba(2, 30, 66,0.9),rgba(2, 23, 51));
+    border-radius: 20px;
+    color:white;
+    margin:20px;
+    font-size: 16px;
+    box-shadow: 2px 2px 20px #707070;
+  }
+  
+  .top_block{
+    display: inline-block;
+    width:500px;
+    height:155px;
+  }
+  .bottom_block{
+    display: inline-block;
+    width:500px;
+    height:155px;
+  }
+  .card_chip{
+    float:left;
+    margin: 20px;
+  }
+  .card_name{
+    float:right;
+    margin:20px;
+    position:relative;
+    font-size: 28px;
+    font-weight:550;
+  }
+  .card_number{
+    font-size: 28px;
+    margin: -45px 0 0 0;
+    text-align-last: center; 
+  }
+  .balance{
+    float:left;
+    margin: 20px;
+    position:relative;
+    top:10px;
+  }
+  .card_balance{
+    font-weight:700;
+    font-size: 30px;
+    margin-top:10px;
+  }
+  .card_icon{
+    float:right;
+    margin: 0 20px 0 0;
+    margin-top:75px;
+  }
+  .circle_left{
+    margin-right: -15px;
+    opacity:0.7;
+  }
