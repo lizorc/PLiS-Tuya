@@ -85,14 +85,14 @@ const CardCreate = () => {
         <div className={styles.simulatorField}>
 
             <label htmlFor="fname">Cuota de manejo: </label>
-            <input onChange = {(e)=>onChange(e)} type="text" required id="cuotaManejo" name="cuotaManejo" placeholder="XXXX XXXX XXXX XXXX"/>
+            <input onChange = {(e)=>onChange(e)} type="text" required id="cuotaManejo" name="cuotaManejo" placeholder="Ingresar valor en pesos"/>
 
         </div>
 
         <div className={styles.simulatorField}>
 
             <label htmlFor="fname">Tasa de interés: </label>
-            <input onChange = {(e)=>onChange(e)} type="text" required id="tasaInteres" name="tasaInteres" placeholder="XXXX XXXX XXXX XXXX"/>
+            <input onChange = {(e)=>onChange(e)} type="text" required id="tasaInteres" name="tasaInteres" placeholder="Ingresar valor del interés"/>
 
         </div>
 
