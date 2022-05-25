@@ -9,6 +9,7 @@ import Login from './components/Login/login'
 import Profile from './components/Profile/profile'
 import Logout from './components/Logout/logout'
 import CardCreate from './components/CardCreate/cardCreate'
+import VistaPDF from './components/VistaPDF/vistaPDF'
 
 import {
     BrowserRouter as Router,
@@ -65,9 +66,14 @@ function Routes(){
                 <CardCreate />
             </Route>
 
+            <Route exact path="/VistaPDF">
+                <VistaPDF />
+            </Route>
+
             <Route exact path="/">
                 <Inicio />
             </Route>
+
 
             </Switch>
 
