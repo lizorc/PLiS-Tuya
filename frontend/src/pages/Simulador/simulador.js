@@ -1,10 +1,12 @@
 import React from 'react';
 import styles from './simulador.module.css'
 import { Link, useHistory} from "react-router-dom";
+import { useAuth0 } from '@auth0/auth0-react';
 import {useState} from 'react'
 
 function Simulador(){
 
+    const {user, isAuthenticated} = useAuth0();
     const [value, setValue] = useState("");
     const [interestRate, setInterestRate] = useState("");
     const [fee, setFee] = useState("");
@@ -70,7 +72,7 @@ function Simulador(){
 
             <div className={styles.simulatorField}>
                 <Link to="/resultados"><input className={styles.submitButton} onClick={handleSubmit} type="submit" value="Realizar simulación"/></Link>
-                <Link to="/simuladorAuth"><input className={styles.submitButton} type="submit" value="Simular con tarjetas"/></Link>
+                {isAuthenticated ? <Link to="/simuladorAuth"><input className={styles.submitButton} type="submit" value="Simular con tarjetas"/></Link> : <></>}
                 <Link to="/instructivo"><input className={styles.instButton} type="submit" value="Instructivo"/></Link>
             </div>
 
