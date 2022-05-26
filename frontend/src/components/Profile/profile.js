@@ -36,12 +36,12 @@ const Profile = () => {
 
             <div className = {styles.user}>
               <div className = {styles.userInfo}>
-                <img src={user.picture} className={styles.imgPerfil} alt={user.name}/>
-                <p className={styles.info}>Información de {user.name}</p>
-              </div>
-
-              <div className = {styles.imgBienvenida}>
-              <img src={require("../../assets/img/construccion.png")} alt={user.name}/>
+                <h2 class={styles.tituloPerfil}>Información de usuario</h2>
+                <div className={styles.imgPerfil} alt={user.name}>
+                  <img className={styles.imgPerfil} src={user.picture} alt={user.name}/>
+                  <p><strong>Nombre: </strong>{user.name}</p>
+                  <p><strong>Correo: </strong>{user.email}</p>
+                </div>
               </div>
 
             </div>
