@@ -1,0 +1,118 @@
+.formBody{
+    width: 100%;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.tituloResultado{
+    padding: 40px;
+    margin-bottom: 30px;
+    color: #707070;
+    font-size: 49px;
+    font-weight: bold;
+}
+
+.resultField{
+    margin-bottom: 60px;
+}
+
+.submitButton{
+
+    width: 200px;
+    height: 40px;
+    margin-top: 10px;
+    color: white;
+    background-color: #0C6FED;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    border-radius: 20px;
+    border:#707070;
+}
+.submitButton:hover{
+    background-color:#053d86 ;
+    transition: 0.5s;
+}
+
+.margen{
+    margin-left: 250px;
+    margin-right: 250px;
+}
+
+.BoxWhite {
+    background: #ffffff;
+    border-radius: 30px;
+    border: 2px solid #9f9e9e;
+    width: 90%;
+    display: inline-block;
+    margin: 10px;
+    padding-top: 20px;
+}
+
+h4{
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+    padding-bottom: 30px;
+}
+
+.titleRes{
+    font-size:20px;
+    font-weight: bold;
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+#parent{
+    width: 100%;
+    height: 90px;
+    white-space: nowrap;
+    overflow: auto;
+    float: left;
+}
+
+.resRes{
+    font-size:25px;
+    font-weight: normal;
+    font-style:normal;
+    font-weight: bold;
+    color:#0C6FED;
+    float: left;
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+}
+
+span{
+    font-weight: lighter;
+    font-style: italic;
+    padding: 10px;
+}
+
+.month{
+    color:#0C6FED;
+}
+
+.deleteButton{
+
+    width: 50px;
+    height: 50px;
+    color: white;
+    background-color: #ec5348;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    border-radius: 50px;
+    border:#707070;
+    float: right;
+    display: inline-block;
+    position: relative;
+    top: -55px;
+    left: -55px;
+    
+}
+.deleteButton:hover{
+    background-color:#860505 ;
+    transition: 0.5s;
+}

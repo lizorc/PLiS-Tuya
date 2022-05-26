@@ -9,7 +9,6 @@ import styles from './nosotros.module.css';
 function Nosotros() {
     const aboutItems = [
         { title: "Simón Marín Giraldo", description: "Scrum Master", github:"https://github.com/smaring1" },
-        { title: "Manuela Moreno Cordoba", description: "Analista", github:"https://github.com/mamorenoc19" },
         { title: "Liz Oriana Rodrigues Cruz", description: "Arquitecta", github:"https://github.com/lizorc" },
         { title: "Julián Ramírez Giraldo", description: "Desarrollador", github:"https://github.com/julianramirez2" },
         { title: "Santiago Alzate Cardona", description: "Tester", github:"https://github.com/Snatiolam" },
