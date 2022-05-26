@@ -1,14 +1,43 @@
 import React from 'react';
 import styles from './resultados.module.css'
 import { useState} from 'react';
+import Button from "react-bootstrap/Button";
 import { useAuth0 } from '@auth0/auth0-react';
 import axios from 'axios';
 import { Link } from "react-router-dom";
+import VistaWeb from "../../components/VistaPDF/VistaWeb";
+import DocuPDF from "../../components/VistaPDF/DocuPDF";
+import { PDFDownloadLink, PDFViewer } from "@react-pdf/renderer";
 //import {useState} from 'react'
 //import { render } from '@testing-library/react';
 function Resultados(){
 
+    // Configuracion PDF
+    const [verWeb, setVerWeb] = React.useState(false);
+    const [verPDF, setVerPDF] = React.useState(false);
+
+    const Menu = ()=> ( 
+        <nav className="NavBoton">
+            <Button className={styles.submitButton}
+            variant="dark"
+            onClick={()=>{
+                setVerWeb(!verWeb);
+                setVerPDF(false);
+            }}>
+            {verWeb ? "Ocultar Web" : "Ver Web"}
+            </Button>
+
+            <Button className={styles.submitButton}
+            variant="dark"
+            onClick={() => {
+                setVerPDF(!verPDF);
+                setVerWeb(false);
+            }}>
+            {verPDF ? "Ocultar PDF" : "Ver PDF"}
+            </Button>
     
+        </nav>
+    )
 
 
     // Configuración resultados
@@ -92,6 +121,24 @@ function Resultados(){
 
             <div className={styles.resultField}>
             <Link to="simulador"><input className={styles.submitButton} type="submit" value="Volver"/></Link>
+            </div>
+
+            <div className={styles.resultField}>
+                <Menu />
+                {verWeb ? <VistaWeb
+                nombre = {nombre}
+                valor = {cuota.toFixed(2)}
+                tiempo = {numQuotas}
+                /> : null}
+
+                {verPDF ? (
+                    <PDFViewer style={{ width: "100%", height: "90vh" }}>
+                    <DocuPDF
+                    nombre = {nombre}
+                    valor = {cuota.toFixed(2)}
+                    tiempo = {numQuotas}/>
+                    </PDFViewer>
+                ) : null}
             </div>
             
             {isAuthenticated ?
