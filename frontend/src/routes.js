@@ -10,6 +10,7 @@ import Profile from './components/Profile/profile'
 import Logout from './components/Logout/logout'
 import CardCreate from './components/CardCreate/cardCreate'
 import VistaPDF from './components/VistaPDF/vistaPDF'
+import Simulaciones from './pages/Simulaciones/simulaciones'
 
 import {
     BrowserRouter as Router,
@@ -26,6 +27,10 @@ function Routes(){
 
             <Switch>
 
+            <Route exact path="/simulaciones">
+                <Simulaciones />
+            </Route>
+
             <Route exact path="/simulador">
                 <Simulador />
             </Route>
@@ -36,10 +41,6 @@ function Routes(){
 
             <Route exact path="/instructivo">
                 <Instructivo />
-            </Route>
-
-            <Route exact path="/resultados">
-                <Resultados />
             </Route>
 
             <Route exact path="/nosotros">

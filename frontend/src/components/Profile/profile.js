@@ -6,6 +6,7 @@ import { Link, useHistory} from "react-router-dom";
 import Cards  from '../UserCards/cards'
 import UserForm from '../UserForm/userForm';
 import axios from 'axios';
+import Simulaciones from '../../pages/Simulaciones/simulaciones';
 
 const Profile = () => {
 
@@ -50,35 +51,35 @@ const Profile = () => {
 
             <div className = {styles.cardA}>
               <div className = {styles.cardInfo}>
-                <h2>Información de las tarjetas</h2>
+                <div className={styles.margininfo}>
+                  <h2>Información de las tarjetas</h2>
 
-                <div className={styles.buttonContainer}>
-                <Link to = "/crearTarjeta"><button className={styles.addButton}>Añadir tarjeta</button></Link>
+                  <div className={styles.buttonContainer}>
+                  <Link to = "/crearTarjeta"><button className={styles.addButton}>Añadir tarjeta</button></Link>
+                  </div>
+
+                  {cards.map((card)=>(
+                      <Cards
+                      nombre = {card.nombre}
+                      nroTarjeta = {card.nroTarjeta}
+                      cuotaManejo = {card.cuotaManejo}
+                      interes = {card.tasaInteres}
+                      />
+                  ))} 
                 </div>
 
-                {cards.map((card)=>(
-                    <Cards
-                    nombre = {card.nombre}
-                    nroTarjeta = {card.nroTarjeta}
-                    cuotaManejo = {card.cuotaManejo}
-                    interes = {card.tasaInteres}
-                    />
-                ))}         
+                <div className={styles.margininfo}>
+                  <h2>Simulaciones Guardadas</h2>
+
+                  <div className={styles.buttonContainer}>
+                  <Link to = "/Simulaciones"><button className={styles.addButton}>Ver simulaciones</button></Link>
+                  </div>
+                </div>
 
               </div>
-
-              
             </div>
-
-
-
-            
-
-           
-            
         </div>
 
-        
     )
   )
 };
