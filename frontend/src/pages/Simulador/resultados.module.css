@@ -34,6 +34,24 @@
     transition: 0.5s;
 }
 
+.submitButton2{
+
+    width: 200px;
+    height: 40px;
+    margin-top: 10px;
+    color: #053d86;
+    background-color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    border-radius: 20px;
+    border:#707070;
+}
+.submitButton2:hover{
+    color:black;
+    transition: 0.5s;
+}
+
 .margen{
     margin-left: 250px;
     margin-right: 250px;

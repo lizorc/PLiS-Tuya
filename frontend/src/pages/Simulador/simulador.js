@@ -9,12 +9,13 @@ function Simulador(){
     const [interestRate, setInterestRate] = useState("");
     const [fee, setFee] = useState("");
     const [numQuotas, setNumQuotas] = useState("");
+    const [nombre, setNombre] = useState("");
 
     const history = useHistory();
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const blog = {value,interestRate,fee,numQuotas};
+        const blog = {value,interestRate,fee,numQuotas,nombre};
         localStorage.setItem("datos",JSON.stringify(blog));
         history.push('/resultados');
     }
@@ -25,6 +26,15 @@ function Simulador(){
         <p className={styles.tituloSimulador}>Simulador de cuotas</p>
 
         <form className={styles.simulatorForm} onSubmit={handleSubmit}>
+
+            <div className={styles.simulatorField}>
+
+                <label htmlFor="fname">Nombre de simulación</label>
+                <input type="text" required id="fname" name="value" placeholder="Ingrese el nombre de simulación"
+                value={nombre} onChange={(e)=>setNombre(e.target.value)}/>
+
+            </div>
+
 
             <div className={styles.simulatorField}>
 

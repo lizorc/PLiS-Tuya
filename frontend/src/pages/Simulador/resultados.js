@@ -1,14 +1,21 @@
 import React from 'react';
 import styles from './resultados.module.css'
+import { useState} from 'react';
+import { useAuth0 } from '@auth0/auth0-react';
+import axios from 'axios';
 import { Link } from "react-router-dom";
 //import {useState} from 'react'
 //import { render } from '@testing-library/react';
 function Resultados(){
 
+    
+
+
+    // Configuración resultados
     const datos = JSON.parse(localStorage.getItem("datos"));
     console.log(datos);
     
-    let { value, fee, numQuotas, interestRate } = datos
+    let { nombre, value, fee, numQuotas, interestRate } = datos
 
     let interestPayment=0,capPayment=0,quota=0;
 
@@ -17,8 +24,33 @@ function Resultados(){
     capPayment = cuota-interestPayment;
     value = parseFloat(value-capPayment);
     
+    // Configuracion guardar simulación
+
+
+
+    const {user, isAuthenticated} = useAuth0();
+    let ownerEmail = "";
+    let valorCuota = "";
+    let tiempo = "";
+
+    const onSubmit = async(e)=>{
+        let ownerEmail = user.email;
+        let valorCuota = cuota.toFixed(2);
+        let tiempo = numQuotas;
+
+        e.preventDefault();
+        const Simulacion = {
+            ownerEmail,
+            valorCuota,
+            tiempo,
+            nombre
+        };
+        await axios.post("http://localhost:4000/createSimulation", Simulacion)
+        return window.location.href = "http://localhost:3000/simulador";
+    }
+
+
     const months = [...Array(parseInt(numQuotas)).keys()].map((item,key)=>{
-    
         
 
         return (
@@ -41,7 +73,7 @@ function Resultados(){
     
     return (
         <div className={styles.formBody}>
-            <p className={styles.tituloResultado}>Resultado de la simulación</p>
+            <p className={styles.tituloResultado}>Resultado de la simulación: {nombre}</p>
 
             <div className = {styles.margen}>
                 
@@ -61,6 +93,15 @@ function Resultados(){
             <div className={styles.resultField}>
             <Link to="simulador"><input className={styles.submitButton} type="submit" value="Volver"/></Link>
             </div>
+            
+            {isAuthenticated ?
+                <form onSubmit={(e)=>onSubmit(e)}>
+                    <div className={styles.resultField}>
+                    <input className={styles.submitButton2} type="submit" value="Guardar simulación"/>
+                    </div>
+                </form>
+            : <></>}
+            
         </div>
         
     );
