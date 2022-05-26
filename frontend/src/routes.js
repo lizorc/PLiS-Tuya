@@ -66,10 +66,6 @@ function Routes(){
                 <CardCreate />
             </Route>
 
-            <Route exact path="/guardarSimulacion">
-                
-            </Route>
-
             <Route exact path="/">
                 <Inicio />
             </Route>
