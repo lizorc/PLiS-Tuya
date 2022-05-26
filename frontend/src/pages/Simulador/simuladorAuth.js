@@ -49,7 +49,7 @@ function SimuladorAuth(){
 
             <div className={styles.simulatorField}>
 
-                <label htmlFor="fname">Nombre de simulación</label>
+                <label htmlFor="fname">Escoja su tarjeta</label>
                 <select type="text" required id="fname" name="tarjeta" placeholder="Ingrese el nombre de simulación"
                 value={tarjeta} onChange={(e)=>setTarjeta(e.target.value)}>
                     <option value="">Seleccione una opción</option>
