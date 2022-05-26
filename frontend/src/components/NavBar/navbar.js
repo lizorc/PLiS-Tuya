@@ -17,6 +17,7 @@ function NavBar(){
                         <li><Link to="/">Inicio</Link></li>
                         <li><Link to="/simulador">Simulador de cuotas</Link></li>
                         <li><Link to="/nosotros">Nosotros</Link></li>
+                        {isAuthenticated ? <li><Link to="/simuladorPruebas">Pruebas</Link></li> : <></> }
                         {isAuthenticated ? (<li><Link to="/perfil">Mi perfil</Link></li> ): <></> }
                         {isAuthenticated ? (<li><Link onClick={()=>logout()}>Cerrar sesión</Link></li> ): <li><Link onClick={()=>loginWithRedirect()}>Iniciar sesión</Link></li> }
                     </ul>

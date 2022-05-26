@@ -1,8 +1,10 @@
 import React from 'react';
 import NavBar from './components/NavBar/navbar'
 import Simulador from './pages/Simulador/simulador'
+import SimuladorAuth from './pages/Simulador/simuladorAuth'
 import Instructivo from './pages/Instructivo/instructivo'
 import Resultados from './pages/Simulador/resultados'
+import ResultadosAuth from './pages/Simulador/resultadosAuth'
 import Inicio from './pages/Inicio/inicio'
 import Nosotros from './pages/Nosotros/nosotros'
 import Login from './components/Login/login'
@@ -34,8 +36,16 @@ function Routes(){
                 <Simulador />
             </Route>
 
+            <Route exact path="/simuladorAuth">
+                <SimuladorAuth />
+            </Route>
+
             <Route exact path="/resultados">
                 <Resultados />
+            </Route>
+
+            <Route exact path="/resultadosAuth">
+                <ResultadosAuth />
             </Route>
 
             <Route exact path="/instructivo">
